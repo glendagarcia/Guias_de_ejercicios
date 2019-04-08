@@ -1,0 +1,67 @@
+Module Module1
+
+    Sub Main(args As String())
+        NumerosImpares()
+        Suma()
+        Adivinanza()
+        Factorial()
+    End Sub
+
+    Sub NumerosImpares()
+        Dim num As UShort = 1
+        While num <= 40
+            Console.WriteLine(num)
+            num += 1
+            If num Mod 2 <> 0 Then
+            End If
+            num = num + 1
+        End While
+        Console.ReadLine()
+    End Sub
+
+    Sub Suma()
+        Console.WriteLine("Ingrese un numero")
+        Dim num1 As UShort = Console.ReadLine()
+        Dim x = 0
+        Dim sumar = 0
+        While x < num1
+            x = x + 1
+            sumar = x + num1
+        End While
+        Console.WriteLine("El numero ingresado fue: " & num1 & "y la suma es de: " & sumar)
+        Console.ReadLine()
+    End Sub
+    Sub Adivinanza()
+        Dim numGenerado As Int16 = New Random().Next(11)
+        Do
+            Console.WriteLine("Adivinar un numero que esté entre 0-10")
+            Dim num = Console.ReadLine()
+
+            If num < numGenerado Then
+                Console.WriteLine("Ups!, cerca pero no")
+
+            ElseIf num > numGenerado Then
+                Console.WriteLine("Vuelve a Intentarlo")
+
+            ElseIf num = numGenerado Then
+                Console.WriteLine("¡Eres todo un adivino!")
+            End If
+        Loop
+        Console.ReadLine()
+    End Sub
+
+    Sub Factorial()
+        Dim fact = 1
+        Console.WriteLine("")
+        Dim num As Integer = Console.ReadLine()
+        For i = 0 To 10 Step 1
+            fact *= num
+            Console.WriteLine("El factorial de " & num & "es: " & fact)
+        Next
+        Console.ReadLine()
+    End Sub
+
+
+
+End Module
+

@@ -1,0 +1,192 @@
+Module Module1
+
+    Sub Main(args As String())
+        Multiplo()
+        ResultadoAcademico()
+        Temperatura()
+        TickTock()
+        Personajes()
+
+    End Sub
+
+    Sub Multiplo()
+
+        Console.WriteLine("Ingrese un numero:")
+        Dim num1 = Console.ReadLine()
+        If num1 Mod 5 = 0 Then
+            Console.WriteLine("El numero ingresado es multiplo de 5 ")
+            Console.ReadLine()
+        Else Console.WriteLine("El numero ingresado  no es multiplo de 5 ")
+            Console.ReadLine()
+        End If
+        Console.WriteLine("Ingrese un segundo numero:")
+        Dim num2 = Console.ReadLine()
+        If num2 Mod 3 = 0 Then
+            Console.WriteLine("El numero ingresado es multiplo de 3 ")
+            Console.ReadLine()
+        Else Console.WriteLine("El numero ingresado no es multiplo de 3 ")
+            Console.ReadLine()
+        End If
+        Console.ReadLine()
+    End Sub
+
+    Sub ResultadoAcademico()
+        Console.WriteLine("Ingrese un nombre:")
+        Dim nombre As String = Console.ReadLine()
+        Console.WriteLine("Ingrese un apellido:")
+        Dim apellido As String = Console.ReadLine()
+        Console.WriteLine("Ingrese la calificacion de: " & nombre & apellido)
+        Dim nota As Double = Console.ReadLine()
+        Console.WriteLine("Ingrese la asistencia de: " & nombre & apellido)
+        Dim asistencia As Integer = Console.ReadLine()
+
+        If nota < 0 Or nota > 10 Then
+            Console.WriteLine("La nota ingresada no puede ser menor que 0 ni mayor que 10")
+            Console.ReadLine()
+        End If
+        If asistencia < 0 Or asistencia > 100 Then
+            Console.WriteLine("La asistencia no puede ser menor que 0 ni mayor que 100")
+            Console.ReadLine()
+        End If
+        If nota >= 6 And asistencia >= 75 Then
+            Console.WriteLine("Con una calificacion de " & nota & " y una asistencia de " & asistencia &
+                                ", " & nombre & apellido & " tiene un resultado de Aprobado")
+            Console.ReadLine()
+        ElseIf nota >= 4 And asistencia >= 75 Then
+            Console.WriteLine("Con una calificacion de" & nota & "y una asistencia de " & asistencia &
+                                "," & nombre & apellido & " necesita hacer COMPLEMENTARIO")
+            Console.ReadLine()
+        Else Console.WriteLine("El alumno" & nombre & apellido & "con una nota de" & nota & "y una asistencia de" & asistencia &
+                                ",ha REPROBADO")
+            Console.ReadLine()
+        End If
+        Console.ReadLine()
+    End Sub
+
+    Sub Temperatura()
+        Console.WriteLine("Ingrese la temperatura actual")
+        Dim temp As String = Console.ReadLine()
+
+        Select Case temp
+            Case "Frio"
+                Console.WriteLine(" Clima está para un chocolate caliente")
+                Console.ReadLine()
+            Case "Caluroso"
+                Console.WriteLine("Clima para perfecto para visitar la playa")
+                Console.ReadLine()
+            Case "Calido"
+                Console.WriteLine("Clima perfecto para un dia de picnik ")
+                Console.ReadLine()
+            Case "Lluvioso"
+                Console.WriteLine("Clima perfecto para dormir")
+                Console.ReadLine()
+        End Select
+        Console.ReadLine()
+    End Sub
+
+    Sub TickTock()
+        Dim contador As UShort = 1
+        Console.WriteLine()
+
+        While contador <= 100
+            If (contador Mod 4 = 0) And (contador Mod 6 = 0) Then
+                Console.WriteLine("Tick-Tock")
+            End If
+            If (contador Mod 4 = 0) Then
+                Console.WriteLine("tick")
+            ElseIf contador Mod 6 = 0 Then
+                Console.WriteLine("tock")
+            ElseIf (contador Mod 4 <> 0) And (contador Mod 6 <> 0) Then
+                Console.WriteLine(contador)
+            End If
+            contador = contador + 1
+        End While
+        Console.ReadLine()
+    End Sub
+
+    Sub Personajes()
+        Console.WriteLine("Elija un grupo:
+                            1. Grupos Musicales
+                            2. Personajes de Peliculas
+                            3. Artistas ")
+        Dim x As Integer = Console.ReadLine()
+
+        If x = 1 Then
+            Console.WriteLine("Elija uno:
+                               1. Jonas Brothers
+                               2. Coldplay
+                               3. La trakalosa xd")
+            Dim gm As Integer = Console.ReadLine()
+            If gm = 1 Then
+                Console.WriteLine("Elija un numero: 1.Joe Jonas, 2.Nick Jonas, 3.Kevin Jonas:")
+                Dim jb As Integer = Console.ReadLine()
+                If jb = 1 Then
+                    Console.WriteLine("Joe Jonas")
+                    Console.ReadLine()
+                ElseIf jb = 2 Then
+                    Console.WriteLine("Nick Jonas")
+                    Console.ReadLine()
+                ElseIf jb = 3 Then
+                    Console.WriteLine("Kevin Jonas")
+                    Console.ReadLine()
+                End If
+            ElseIf gm = 2 Then
+                Console.WriteLine("Elija un numero: 1.Chris Martin, 2.Guy Berryman, 3.Will Champion")
+                Dim cp As Integer = Console.ReadLine()
+                If cp = 1 Then
+                    Console.WriteLine("Chris Martin")
+                    Console.ReadLine()
+                ElseIf cp = 2 Then
+                    Console.WriteLine("Guy Berryman")
+                    Console.ReadLine()
+                ElseIf cp = 3 Then
+                    Console.WriteLine("Will Champion")
+                    Console.ReadLine()
+                End If
+            ElseIf gm = 3 Then
+                Console.WriteLine("Elija un numero: 1.Edwin Luna, 2.Edgar Nuñez, 3.Adrian Navarro")
+                Dim tc As Integer = Console.ReadLine()
+                If tc = 1 Then
+                    Console.WriteLine("Edwin Luna")
+                    Console.ReadLine()
+                ElseIf tc = 2 Then
+                    Console.WriteLine("Edgar Nuñez")
+                    Console.ReadLine()
+                ElseIf tc = 3 Then
+                    Console.WriteLine("Adrian Navarro")
+                    Console.ReadLine()
+                End If
+            End If
+        ElseIf x = 2 Then
+            Console.WriteLine("Elija un numero: 1.Thanos, 2.Capitan America, 3.Viuda Negra")
+            Dim per As Integer = Console.ReadLine()
+
+            If per = 1 Then
+                Console.WriteLine("Thanos")
+                Console.ReadLine()
+            ElseIf per = 2 Then
+                Console.WriteLine("Capitan America")
+                Console.ReadLine()
+            ElseIf per = 3 Then
+                Console.WriteLine("Viuda Negra")
+                Console.ReadLine()
+            End If
+        ElseIf x = 3 Then
+            Console.WriteLine("Elija un numero: 1. Lady Gaga, 2.Adele, 3.Bruno Mars")
+            Dim arts As Integer = Console.ReadLine()
+
+            If arts = 1 Then
+                Console.WriteLine("Lady Gaga")
+                Console.ReadLine()
+            ElseIf arts = 2 Then
+                Console.WriteLine("Adele")
+                Console.ReadLine()
+            ElseIf arts = 3 Then
+                Console.WriteLine("Bruno Mars")
+                Console.ReadLine()
+            End If
+            Console.ReadLine()
+        End If
+    End Sub
+
+End Module

@@ -18,24 +18,29 @@ Module Module1
         End While
         Console.ReadLine()
     End Sub
-
-    Sub Suma()
-        Console.WriteLine("Ingrese un numero")
-        Dim num1 As UShort = Console.ReadLine()
+ Sub Suma()
+        Console.WriteLine("Suma")
         Dim x = 0
         Dim sumar = 0
-        While x < num1
-            x = x + 1
-            sumar = x + num1
+        Console.WriteLine("Ingrese un numero")
+        Dim num As UShort = Console.ReadLine
+        While x < num
+            x += 1
+            sumar = x + num
         End While
-        Console.WriteLine("El numero ingresado fue: " & num1 & "y la suma es de: " & sumar)
+        Console.WriteLine("El numero ingresado fue:  " & num & " y la suma es: " & sumar)
         Console.ReadLine()
+
     End Sub
+
     Sub Adivinanza()
+        Console.WriteLine("Adivinanza")
+        Dim num As Integer
         Dim numGenerado As Int16 = New Random().Next(11)
-        Do
+        Do Until num = numGenerado
+
             Console.WriteLine("Adivinar un numero que esté entre 0-10")
-            Dim num = Console.ReadLine()
+            num = Console.ReadLine()
 
             If num < numGenerado Then
                 Console.WriteLine("Ups!, cerca pero no")
@@ -49,19 +54,29 @@ Module Module1
         Loop
         Console.ReadLine()
     End Sub
-
     Sub Factorial()
+        Console.WriteLine("Factorial de un numero")
         Dim fact = 1
-        Console.WriteLine("")
+        Dim x = 1
+        Console.WriteLine(" Ingrese un numero")
         Dim num As Integer = Console.ReadLine()
-        For i = 0 To 10 Step 1
-            fact *= num
-            Console.WriteLine("El factorial de " & num & "es: " & fact)
+        For i = 1 To num
+            fact *= x
+            x += 1
         Next
+        Console.WriteLine("El factorial de " & num & ",es de: " & fact)
         Console.ReadLine()
+    End Sub
+    Sub Tablas()
+        Console.WriteLine("Tablas de multiplicar")
+        Dim num = Console.ReadLine()
+        For i = 1 To num
+
+        Next
     End Sub
 
 
-
 End Module
+
+
 

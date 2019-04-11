@@ -5,6 +5,11 @@ Module Module1
         Suma()
         Adivinanza()
         Factorial()
+	Tablas()
+        CadenaInversa()
+        POO1A2019()
+        Contar()
+        Aritmetica()
     End Sub
 
     Sub NumerosImpares()
@@ -18,19 +23,17 @@ Module Module1
         End While
         Console.ReadLine()
     End Sub
- Sub Suma()
-        Console.WriteLine("Suma")
-        Dim x = 0
+    Sub Suma()
+      Console.WriteLine("Suma")
+        Dim x = 1
         Dim sumar = 0
         Console.WriteLine("Ingrese un numero")
         Dim num As UShort = Console.ReadLine
-        While x < num
-            x += 1
+        While num >= x
             sumar = x + num
-        End While
-        Console.WriteLine("El numero ingresado fue:  " & num & " y la suma es: " & sumar)
-        Console.ReadLine()
-
+            Console.WriteLine(sumar)
+            x += 1
+        End While   
     End Sub
 
     Sub Adivinanza()
@@ -68,14 +71,49 @@ Module Module1
         Console.ReadLine()
     End Sub
     Sub Tablas()
-        Console.WriteLine("Tablas de multiplicar")
+      Console.WriteLine("Tablas de Multiplicar")
+        Dim x As Integer = 10
+        Dim y As Integer = 1
+        Console.WriteLine("ingrese un numero para mostrar la tabla de multiplicacion")
         Dim num = Console.ReadLine()
-        For i = 1 To num
-
+        Console.ReadLine()
+        For i = 1 To x
+            Console.WriteLine(y & "*" & num & "=" & y * num)
+            y = y + 1
         Next
+        Console.ReadLine()
+     End Sub
+      Sub CadenaInversa()
+        Console.WriteLine("Cadena Inversa")
+        Console.WriteLine("Ingrese una frase")
+        Dim frase = Console.ReadLine()
+        Console.ReadLine()
+        For i = 0 To frase.Length() - 1
+            Console.WriteLine(frase.Reverse(i))
+        Next
+        Console.ReadLine()
     End Sub
-
-
+    Sub POO1A2019()
+        Console.WriteLine("Estudiantes de POO1")
+        Dim companeros() As String = {"Gerardo", "Mauricio", "Luna", "Raul", "Glenda"}
+        For Each compa As String In companeros
+            Console.WriteLine(compa)
+        Next
+        Console.ReadLine()
+    End Sub
+    Sub Contar()
+        Console.WriteLine("Contar palabras y letras")
+        Console.WriteLine("Ingrese una frase:")
+        Dim x As String = Console.ReadLine()
+        Dim frase As String() = x.Split()
+        For Each palabras In frase
+            Console.WriteLine(palabras)
+            Console.WriteLine(palabras.Length())
+        Next
+        Console.ReadLine()
+    End Sub
+    Sub Aritmetica()
+    End Sub
 End Module
 
 

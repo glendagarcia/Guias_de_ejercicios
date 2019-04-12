@@ -1,12 +1,35 @@
 Module Module1
 
-    Sub Main(args As String())
-        Multiplo()
-        ResultadoAcademico()
-        Temperatura()
-        TickTock()
-        Personajes()
+    Sub Main()
+        Dim opcion As Integer
 
+
+        While opcion >= 0 And opcion <= 5
+            Console.WriteLine("1.Multiplo")
+            Console.WriteLine("2.Resultado Academico")
+            Console.WriteLine("3.Temperatura")
+            Console.WriteLine("4.Tick Tock")
+            Console.WriteLine("5.Personajes Favoritos")
+            Console.WriteLine("Elija una opcion <1-5> o presione cualquier otro numero para salir")
+            opcion = Console.ReadLine()
+            If opcion = 1 Then
+                Multiplo()
+            End If
+            If opcion = 2 Then
+                ResultadoAcademico()
+            End If
+            If opcion = 3 Then
+                Temperatura()
+            End If
+            If opcion = 4 Then
+
+                TickTock()
+            End If
+            If opcion = 5 Then
+                Personajes()
+            End If
+
+        End While
     End Sub
 
     Sub Multiplo()
@@ -27,7 +50,8 @@ Module Module1
         Else Console.WriteLine("El numero ingresado no es multiplo de 3 ")
             Console.ReadLine()
         End If
-        Console.ReadLine()
+
+
     End Sub
 
     Sub ResultadoAcademico()
@@ -60,24 +84,24 @@ Module Module1
                                 ",ha REPROBADO")
             Console.ReadLine()
         End If
-        Console.ReadLine()
+
     End Sub
 
     Sub Temperatura()
         Console.WriteLine("Ingrese la temperatura actual")
-        Dim temp As String = Console.ReadLine()
+        Dim temp As Integer = Console.ReadLine()
 
         Select Case temp
-            Case "Frio"
+            Case < 13
                 Console.WriteLine(" Clima está para un chocolate caliente")
                 Console.ReadLine()
-            Case "Caluroso"
+            Case < 20
                 Console.WriteLine("Clima para perfecto para visitar la playa")
                 Console.ReadLine()
-            Case "Calido"
+            Case < 25
                 Console.WriteLine("Clima perfecto para un dia de picnik ")
                 Console.ReadLine()
-            Case "Lluvioso"
+            Case < 15
                 Console.WriteLine("Clima perfecto para dormir")
                 Console.ReadLine()
         End Select

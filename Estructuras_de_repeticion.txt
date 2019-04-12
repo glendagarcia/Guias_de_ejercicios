@@ -1,15 +1,47 @@
 Module Module1
 
-    Sub Main(args As String())
-        NumerosImpares()
-        Suma()
-        Adivinanza()
-        Factorial()
-	Tablas()
-        CadenaInversa()
-        POO1A2019()
-        Contar()
-        Aritmetica()
+    Sub Main()
+        Dim opcion As Integer
+        While opcion >= 0 And opcion <= 5
+            Console.WriteLine("1.Numeros Impares")
+            Console.WriteLine("2.Suma de numeros enteros")
+            Console.WriteLine("3.Adivinanza")
+            Console.WriteLine("4.Factorial")
+            Console.WriteLine("5.Tablas de multiplicar")
+            Console.WriteLine("6.Frases al reves")
+            Console.WriteLine("7.Estudiantes de POO1 2019")
+            Console.WriteLine("8.Contar las palabras y letras de una frase")
+            Console.WriteLine("9.Aritmetica con conjuntos")
+            Console.WriteLine("Elija una opcion <1-9> o presione cualquier otro numero para salir")
+            opcion = Console.ReadLine()
+            If opcion = 1 Then
+                NumerosImpares()
+            End If
+            If opcion = 2 Then
+                Suma()
+            End If
+            If opcion = 3 Then
+                Adivinanza()
+            End If
+            If opcion = 4 Then
+                Factorial()
+            End If
+            If opcion = 5 Then
+                Tablas()
+            End If
+            If opcion = 6 Then
+                CadenaInversa()
+            End If
+            If opcion = 7 Then
+                POO1A2019()
+            End If
+            If opcion = 8 Then
+                Contar()
+            End If
+            If opcion = 9 Then
+                Aritmetica()
+            End If
+        End While
     End Sub
 
     Sub NumerosImpares()
@@ -23,8 +55,9 @@ Module Module1
         End While
         Console.ReadLine()
     End Sub
+
     Sub Suma()
-      Console.WriteLine("Suma")
+        Console.WriteLine("Suma de numeros enteros")
         Dim x = 1
         Dim sumar = 0
         Console.WriteLine("Ingrese un numero")
@@ -33,7 +66,9 @@ Module Module1
             sumar = x + num
             Console.WriteLine(sumar)
             x += 1
-        End While   
+        End While
+        Console.ReadLine()
+
     End Sub
 
     Sub Adivinanza()
@@ -71,7 +106,7 @@ Module Module1
         Console.ReadLine()
     End Sub
     Sub Tablas()
-      Console.WriteLine("Tablas de Multiplicar")
+        Console.WriteLine("Tablas de Multiplicar")
         Dim x As Integer = 10
         Dim y As Integer = 1
         Console.WriteLine("ingrese un numero para mostrar la tabla de multiplicacion")
@@ -82,8 +117,8 @@ Module Module1
             y = y + 1
         Next
         Console.ReadLine()
-     End Sub
-      Sub CadenaInversa()
+    End Sub
+    Sub CadenaInversa()
         Console.WriteLine("Cadena Inversa")
         Console.WriteLine("Ingrese una frase")
         Dim frase = Console.ReadLine()
@@ -113,8 +148,53 @@ Module Module1
         Console.ReadLine()
     End Sub
     Sub Aritmetica()
+        Console.WriteLine("Aritmetica con conjuntos")
+        Console.WriteLine("Arreglo1 : 1,2,3")
+        Console.WriteLine("Arreglo2: 4,5,6")
+        Console.ReadLine()
+        Dim arreglo1 As New List(Of Integer) From {1, 2, 3}
+        Dim arreglo2 As New List(Of Integer) From {4, 5, 6}
+        Console.WriteLine("1.Suma")
+        Console.WriteLine("2.Resta")
+        Console.WriteLine("3.Multiplicacion")
+        Console.WriteLine("4.Division")
+        Console.WriteLine("Elija una opcion o presione cualquier otro numero para salir")
+        Dim opciones As UShort = Console.ReadLine()
+        Select Case opciones
+            Case Is = 1
+                For Each arreglo As Integer In arreglo1
+                    For Each numero As Integer In arreglo2
+                        Console.WriteLine(arreglo + numero)
+                        Console.ReadLine()
+                    Next
+                Next
+                Console.ReadLine()
+            Case Is = 2
+                For Each arreglo As Integer In arreglo1
+                    For Each numero As Integer In arreglo2
+                        Console.WriteLine(arreglo - numero)
+                        Console.ReadLine()
+                    Next
+                Next
+                Console.ReadLine()
+            Case Is = 3
+                For Each arreglo As Integer In arreglo1
+                    For Each numero As Integer In arreglo2
+                        Console.WriteLine(arreglo * numero)
+                        Console.ReadLine()
+                    Next
+                Next
+                Console.ReadLine()
+            Case Is = 4
+                For Each arreglo As Integer In arreglo1
+                    For Each numero As Integer In arreglo2
+                        Console.WriteLine(arreglo / numero)
+                        Console.ReadLine()
+                    Next
+                Next
+                Console.ReadLine()
+        End Select
+
     End Sub
 End Module
-
-
 

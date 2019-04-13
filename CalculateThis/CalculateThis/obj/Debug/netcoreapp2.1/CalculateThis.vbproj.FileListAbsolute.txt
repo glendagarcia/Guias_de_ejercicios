@@ -1,0 +1,11 @@
+C:\Users\VAIO\source\repos\CalculateThis\CalculateThis\obj\Debug\netcoreapp2.1\CalculateThis.vbprojAssemblyReference.cache
+C:\Users\VAIO\source\repos\CalculateThis\CalculateThis\obj\Debug\netcoreapp2.1\CalculateThis.vbproj.CoreCompileInputs.cache
+C:\Users\VAIO\source\repos\CalculateThis\CalculateThis\obj\Debug\netcoreapp2.1\CalculateThis.AssemblyInfoInputs.cache
+C:\Users\VAIO\source\repos\CalculateThis\CalculateThis\obj\Debug\netcoreapp2.1\CalculateThis.AssemblyInfo.vb
+C:\Users\VAIO\source\repos\CalculateThis\CalculateThis\bin\Debug\netcoreapp2.1\CalculateThis.deps.json
+C:\Users\VAIO\source\repos\CalculateThis\CalculateThis\bin\Debug\netcoreapp2.1\CalculateThis.runtimeconfig.json
+C:\Users\VAIO\source\repos\CalculateThis\CalculateThis\bin\Debug\netcoreapp2.1\CalculateThis.runtimeconfig.dev.json
+C:\Users\VAIO\source\repos\CalculateThis\CalculateThis\bin\Debug\netcoreapp2.1\CalculateThis.dll
+C:\Users\VAIO\source\repos\CalculateThis\CalculateThis\bin\Debug\netcoreapp2.1\CalculateThis.pdb
+C:\Users\VAIO\source\repos\CalculateThis\CalculateThis\obj\Debug\netcoreapp2.1\CalculateThis.dll
+C:\Users\VAIO\source\repos\CalculateThis\CalculateThis\obj\Debug\netcoreapp2.1\CalculateThis.pdb
